@@ -1,0 +1,18 @@
+{
+  "schema": "core_factory_binary_distributions_v1",
+  "providers": {
+    "tesseract": {
+      "version": "5.x-approved",
+      "status": "approved",
+      "distributions": {
+        "windows-amd64": {
+          "artifact_id": "tesseract-5x-windows-amd64-v1",
+          "url": "https://REPLACE_WITH_APPROVED_ARTIFACT_URL/tesseract_windows_x64.zip",
+          "sha256": "REPLACE_WITH_EXACT_64_CHAR_SHA256",
+          "size": 0,
+          "status": "approved"
+        }
+      }
+    }
+  }
+}

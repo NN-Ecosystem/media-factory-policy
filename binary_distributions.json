@@ -1,0 +1,24 @@
+{
+  "schema": "core_factory_binary_distributions_v1",
+  "providers": {
+    "tesseract": {
+      "version": "5.5.3.20260724",
+      "status": "approved",
+      "distributions": {
+        "windows-amd64": {
+          "artifact_id": "tesseract-5.5.3.20260724-windows-amd64-v1",
+          "sha256": "ebc734c54c50bd2a7e16bc09f4ad68675300d4244bee1ce37079de3e2253600c",
+          "size": 45981169,
+          "status": "approved",
+          "storage": {
+            "kind": "github_release",
+            "owner": "NN-Ecosystem",
+            "repo": "ecosystem-verify-server",
+            "tag": "runtime-tesseract-5.5.3.20260724",
+            "asset": "tesseract_windows_x64.zip"
+          }
+        }
+      }
+    }
+  }
+}

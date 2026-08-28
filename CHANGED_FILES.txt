@@ -1,0 +1,16 @@
+Core Factory Cloud 3.4.x - Credit Order Cancel patch
+
+Changed files only:
+- server/app.py
+- server/services/payment_service.py
+- server/services/credit_order_service.py
+- server/services/paddle_payment_provider.py
+- server/services/payment_provider.py
+
+Behavior:
+- Adds POST /v1/cloud/credit-orders/cancel using the same Core identity body as checkout.
+- Only PENDING orders may be cancelled by their owning account.
+- If a Paddle transaction is bound, Cloud cancels the Paddle transaction first via PATCH /transactions/{id} status=canceled.
+- Only after provider cancellation succeeds does Core order transition PENDING -> CANCELLED.
+- Completed orders cannot be cancelled; repeated cancel of CANCELLED is idempotent.
+- Wallet/CreditGrant/Ledger are never mutated by cancellation.

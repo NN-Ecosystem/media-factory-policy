@@ -1,0 +1,39 @@
+{
+  "schema": "core_item_usage_policies_v1",
+  "item_policies": {
+    "personal_assistant_plugin": {
+      "runtime": {
+        "mode": "ambient",
+        "user_start_stop": false,
+        "idle_billable": false,
+        "metering_mode": "per_action"
+      },
+      "actions": {
+        "plugin.run": {
+          "mode": "free",
+          "credits": 0
+        },
+        "speech.transcribe": {
+          "mode": "per_run",
+          "credits": 1
+        },
+        "text.translate": {
+          "mode": "per_run",
+          "credits": 1
+        },
+        "document.extract": {
+          "mode": "per_run",
+          "credits": 1
+        },
+        "document.generate": {
+          "mode": "per_run",
+          "credits": 1
+        },
+        "assistant.smart_action": {
+          "mode": "per_run",
+          "credits": 1
+        }
+      }
+    }
+  }
+}
